@@ -1,1 +1,25 @@
+Observaciones formato MIDI:
+
+- Cada canal posee un valor entero que comienza en 0. El canal 0 está destinado a guardar metadata sobre el archivo (nombre del archivo, etc), mientras que el canal 1 informacion respecto de la cancion (pulso, etc). A partir del canal 2 están disponibles para creación de pistas El canal 10 está reservado para percusión (POR CONFIRMAR).
+
+- Dentro de cada canal se tienen indicaciones sobre a qué instrumento corresponde y qué características se le darán al sonido del mismo durante la reproducción (efecto, intensidad de ciertas frecuencias, etc). Luego de los datos sobre el instrumento se tienen los comandos "note_on", "note_off" que delimitan el inicia y final de una nota una vez que comienza a reproducirse.
+
+Observaciones datos para el proyecto:
+
+- El midi para cada canción posee exclusivamente: Guitarra, Bajo, Piano, Batería y/o Voz. 
+- En ciertas canciones se tienen órganos como instrumentos presentes, estos se trabajarán como pianos por simplicidad.
+- Los pianos usan los canales: 0-7 (Pianos), y 16-23(Organs)
+- Guitarras usan canales: 24-31
+- Bajo: 32-39
+- La voz utiliza exclusivamente el canal 68 (Oboe).
+- Batería: 112-119
+
+Algunos midis poseen cierto grado de descoordinacion entre instrumentos, esto venía desde la base de datos y se prefirió mantenerlo para aumentar la cantidad de datos.
+
+Se eliminaron algunos midis desde el repositorio original por: Tener un grado de descoordinacion que afectaría de manera considerablemente negativa el aprendizaje, no poseer los instrumentos que se ajustan al problema (pese a que en algunos casos se reemplazó violines por guitarras para aumentar los datos), o simplemente venir defectuosos para la lectura con el programa Guitar Pro.
+
+En algunos casos las baterias no se ajustaban al estandar utilizado por guitar pro para percusiones y esas baterías fueron removidas por representar información sin sentido musical.
+
+Existen en los archivos midis MUCHOS casos donde existen más de una guitarra, o más de un piano. Si bien se intentó limpiar las pistas que aportaban poca información a la canción, la gran mayoría no podía ser removida sin quitarle sentido a la canción. Por lo tanto es importante realizar un MERGE EXHAUSTIVO en estas pistas para poder entrenar de manera adecuada al futuro programa.
+
 
