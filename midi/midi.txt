@@ -20,6 +20,6 @@ Se eliminaron algunos midis desde el repositorio original por: Tener un grado de
 
 En algunos casos las baterias no se ajustaban al estandar utilizado por guitar pro para percusiones y esas baterías fueron removidas por representar información sin sentido musical.
 
-Existen en los archivos midis MUCHOS casos donde existen más de una guitarra, o más de un piano. Si bien se intentó limpiar las pistas que aportaban poca información a la canción, la gran mayoría no podía ser removida sin quitarle sentido a la canción. Por lo tanto es importante realizar un MERGE EXHAUSTIVO en estas pistas para poder entrenar de manera adecuada al futuro programa.
+Existen en los archivos midis MUCHOS casos donde existen más de una guitarra (en algunos casos hasta 3), o más de un piano. Si bien se intentó limpiar las pistas que aportaban poca información a la canción, la gran mayoría no podía ser removida sin quitarle sentido a la canción. Por lo tanto es importante realizar un MERGE EXHAUSTIVO en estas pistas para poder entrenar de manera adecuada al futuro programa.
 
 
