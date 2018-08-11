@@ -1,13 +1,13 @@
 
 
 # Instala el midicsv-1.1
-import urllib
+import urllib.request
 import tarfile
 import os
 
 # instala midicsv si no esta
 if not os.path.exists("midicsv-1.1"):
-    midicsv_comprimido = urllib.urlopen("http://www.fourmilab.ch/webtools/midicsv/midicsv-1.1.tar.gz")
+    midicsv_comprimido = urllib.request.urlopen("http://www.fourmilab.ch/webtools/midicsv/midicsv-1.1.tar.gz")
     with open('midicsv-1.1.tar.gz','wb') as output:
       output.write(midicsv_comprimido.read())
 
@@ -24,8 +24,14 @@ if not os.path.exists("midicsv-1.1"):
         print("Estamos en windows no hay que compilar")
     else:  # Si es linux usar el compilado como ejecutable
         print("Se compila el midicsv")
-        cmd = 'bin/bar --option --otheroption' # todo
-        resultado = os.system(cmd)  # returns the exit status
+        build_dir = "midicsv-1.1"
+        cwd = os.getcwd() # get current directory
+        try:
+            os.chdir(build_dir)
+            resultado = os.system("make")
+        finally:
+            os.chdir(cwd)
+
         assert(resultado == 0),"Fallo la compilacion de midicsv realizar compilacion manual y volver a ejecutar script."
 
 # procesa los midis

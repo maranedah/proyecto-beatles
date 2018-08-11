@@ -9,5 +9,6 @@ for file in dirs:
 
 os.system('mkdir csv')
 for a in dirs2:
-  os.system('midicsv midi/'+a+ ' csv/'+os.path.splitext(a)[0]+'.csv')
+  os.system('midicsv-1.1/midicsv midi/'+a+ ' csv/'+os.path.splitext(a)[0]+'.csv')
 print("Terminado")
+
