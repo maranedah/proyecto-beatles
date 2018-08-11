@@ -150,5 +150,5 @@ for i in range(len(dirs)):
                            #             row[3]=' '+str(p-2)
     #                                print(row)
                         spamwriter.writerow(row)
-       # to_midi(csv_out_path, midi_out_path)
+        to_midi(csv_out_path, midi_out_path)
        
