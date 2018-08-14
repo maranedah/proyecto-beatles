@@ -64,52 +64,52 @@ for i in range(len(dirs)):
                     num.append(row[0])
                     ins.append("Percussion")
                 else:    
-                    if  int(row[4])<9:
+                    if  int(row[4])<10:
                         num.append(row[0])
                         ins.append("Piano")
-                    elif int(row[4])<17:
+                    elif int(row[4])<18:
                         num.append(row[0])
                         ins.append("Chromatic_Percussion")
-                    elif  int(row[4])<25 :
+                    elif  int(row[4])<26 :
                         num.append(row[0])
                         ins.append("Organ")
-                    elif int(row[4])<33 :
+                    elif int(row[4])<34 :
                         num.append(row[0])
                         ins.append("Guitar")
-                    elif int(row[4])<41 :
+                    elif int(row[4])<42 :
                         num.append(row[0])
                         ins.append("Bass")
-                    elif int(row[4])<49 :
+                    elif int(row[4])<50 :
                         num.append(row[0])
                         ins.append("Strings")
-                    elif int(row[4])<57 :
+                    elif int(row[4])<58 :
                         num.append(row[0])
                         ins.append("Ensemble")
-                    elif int(row[4])<65 :
+                    elif int(row[4])<66 :
                         num.append(row[0])
                         ins.append("Brass")
-                    elif int(row[4])<73 :
+                    elif int(row[4])<74 :
                         num.append(row[0])
                         ins.append("Reed_Voice")
-                    elif int(row[4])<81 :
+                    elif int(row[4])<82 :
                         num.append(row[0])
                         ins.append("Pipe")
-                    elif int(row[4])<89 :
+                    elif int(row[4])<90 :
                         num.append(row[0])
                         ins.append("Synth_Lead")
-                    elif int(row[4])<97 :
+                    elif int(row[4])<98 :
                         num.append(row[0])
                         ins.append("Synth_Pad")
-                    elif int(row[4])<105 :
+                    elif int(row[4])<106 :
                         num.append(row[0])
                         ins.append("Synth_Effects")
-                    elif int(row[4])<113 :
+                    elif int(row[4])<114 :
                         num.append(row[0])
                         ins.append("Ethnic")
-                    elif int(row[4])<121 :
+                    elif int(row[4])<122 :
                         num.append(row[0])
                         ins.append("Percussive")
-                    elif int(row[4])<129 :
+                    elif int(row[4])<130 :
                         num.append(row[0])
                         ins.append("Sound_effects")
                     
@@ -122,7 +122,7 @@ for i in range(len(dirs)):
         h=['0','1']
         B=ins[0]
         while B in ins:
-            C=ins.index(B)-1
+            C=ins.index(B)
             h.append(num[C])
             num.remove(num[C])
             ins.remove(B)
